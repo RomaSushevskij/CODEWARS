@@ -1,4 +1,4 @@
-function firstNonConsecutive(arr) {
+function firstNonConsecutive_1(arr) {
 
     for (let i = 0; i < arr.length - 1; i += 1) {
         if ((arr[i + 1] - arr[i]) === 1) {
@@ -12,4 +12,9 @@ function firstNonConsecutive(arr) {
 
 }
 
-firstNonConsecutive([1, 2, 5, 4, 5, 6, 7]);
+function firstNonConsecutive_2(arr) {
+    let result = arr.find((val, index) => val !== index + arr[0]);
+
+    return (Number.isInteger(result)) ? result : null;
+}
+
