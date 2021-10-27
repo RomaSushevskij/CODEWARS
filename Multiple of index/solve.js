@@ -1,3 +1,3 @@
 function multipleOfIndex(array) {
-    return array.filter((item, index) => item%index === 0)
+    return array.filter((item, index) => item % index === 0)
 }
