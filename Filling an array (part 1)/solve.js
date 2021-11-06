@@ -1,0 +1,1 @@
+const arr = N => N > 0 ? Array(N).fill(0).map((item, index) => item + index) : [];
