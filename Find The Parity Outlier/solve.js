@@ -1,4 +1,4 @@
-function findOutlier(integers) {
+function findOutlier_1(integers) {
     let countEven = 0;
     let countOdd = 0;
     let ans;
@@ -31,6 +31,12 @@ function findOutlier(integers) {
         }
     }
     return ans
+}
+
+function findOutlier(integers) {
+    const evens = integers.filter(item => item % 2 === 0);
+    const odds = integers.filter(item => item % 2 !== 0);
+    return evens.length === 1 ? evens[0] : odds[0]
 }
 
 findOutlier([0, 1, 2])
